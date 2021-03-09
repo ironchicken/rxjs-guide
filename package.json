@@ -9,6 +9,7 @@
     "basics": "ts-node src/basics.ts",
     "subjects": "ts-node src/subjects.ts",
     "multicast": "ts-node src/multicast.ts",
+    "refcount": "ts-node src/refCount.ts",
     "test": "true"
   },
   "repository": {
