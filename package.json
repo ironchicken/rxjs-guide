@@ -11,6 +11,7 @@
     "multicast": "ts-node src/multicast.ts",
     "refcount": "ts-node src/refCount.ts",
     "behaviour": "ts-node src/behaviour.ts",
+    "scheduluer": "ts-node src/scheduler.ts",
     "test": "true"
   },
   "repository": {
