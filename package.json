@@ -10,6 +10,7 @@
     "subjects": "ts-node src/subjects.ts",
     "multicast": "ts-node src/multicast.ts",
     "refcount": "ts-node src/refCount.ts",
+    "behaviour": "ts-node src/behaviour.ts",
     "test": "true"
   },
   "repository": {
