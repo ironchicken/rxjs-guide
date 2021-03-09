@@ -8,6 +8,7 @@
     "lint": "eslint . --ext .ts",
     "basics": "ts-node src/basics.ts",
     "subjects": "ts-node src/subjects.ts",
+    "multicast": "ts-node src/multicast.ts",
     "test": "true"
   },
   "repository": {
