@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint . --ext .ts",
-    "run": "ts-node src/index.ts",
+    "basics": "ts-node src/basics.ts",
     "test": "true"
   },
   "repository": {
