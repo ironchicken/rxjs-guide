@@ -1,4 +1,4 @@
-import { Observable, of } from "rxjs";
+import { Observable, of, interval } from "rxjs";
 import { map, first } from "rxjs/operators";
 
 const observable = new Observable((subscriber) => {
@@ -41,3 +41,13 @@ map((x: number): number => x * x)(numbers).subscribe((v) =>
 );
 
 first()(numbers).subscribe((v) => console.log(`first: ${v}`));
+
+const ticker1 = interval(500);
+const ticker2 = interval(200);
+
+const atInterval1 = ticker1.subscribe((x) => console.log(`Ticker 1: ${x}`));
+const atInverval2 = ticker2.subscribe((x) => console.log(`Ticker 2: ${x}`));
+
+atInterval1.add(atInverval2);
+
+setTimeout(() => atInterval1.unsubscribe(), 3000);
