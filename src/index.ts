@@ -1,4 +1,5 @@
-import { Observable } from "rxjs";
+import { Observable, of } from "rxjs";
+import { map, first } from "rxjs/operators";
 
 const observable = new Observable((subscriber) => {
   subscriber.next(1);
@@ -32,3 +33,11 @@ setTimeout(() => {
   subscription.unsubscribe();
   console.log("Unsubscribed");
 }, 500);
+
+const numbers = of(1, 2, 3);
+
+map((x: number): number => x * x)(numbers).subscribe((v) =>
+  console.log(`value: ${v}`)
+);
+
+first()(numbers).subscribe((v) => console.log(`first: ${v}`));
