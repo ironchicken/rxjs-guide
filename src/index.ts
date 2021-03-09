@@ -11,7 +11,7 @@ const observable = new Observable((subscriber) => {
 });
 
 console.log("Subscribing...");
-observable.subscribe({
+const subscription = observable.subscribe({
   next: (x) => {
     console.log(`Got value ${x}`);
   },
@@ -23,3 +23,8 @@ observable.subscribe({
   },
 });
 console.log("Subscribed...");
+
+setTimeout(() => {
+  subscription.unsubscribe();
+  console.log("Unsubscribed");
+}, 500);
